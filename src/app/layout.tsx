@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import { Press_Start_2P } from 'next/font/google'
+
+const font = Press_Start_2P({ subsets: ['latin'], weight: ['400'] })
 
 export const metadata: Metadata = {
   title: 'obalazs.hu',
@@ -11,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body style={{ margin: 0, backgroundColor: '#CB372D' }}>{children}</body>
+    <html lang="en" className={font.className}>
+      <body style={{ margin: 0, backgroundColor: '#e94823' }}>{children}</body>
     </html>
   )
 }
